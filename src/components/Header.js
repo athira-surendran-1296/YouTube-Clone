@@ -15,7 +15,7 @@ const Header = () => {
             <img className='w-24' src={LOGO} alt='Logo'/>
         </div>
         <div className='flex flex-1'>
-            <input className='border border-gray-400 flex-1 rounded-l-full' />
+            <input className='border border-gray-400 flex-1 rounded-l-full p-1 px-3' />
            <button className='border border-gray-400 border-l-0 px-4 rounded-r-full bg-gray-100'>
                 <img className='w-7' src={SEARCH_ICON} />
            </button>
