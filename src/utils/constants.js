@@ -3,3 +3,5 @@ export const LOGO = 'https://www.gstatic.com/youtube/img/branding/youtubelogo/sv
 export const SEARCH_ICON = 'https://cdn2.iconfinder.com/data/icons/clean-simple/75/search-1024.png';
 
 // APIs
+export const GET_MOST_POPULAR_VIDEOS = 
+'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='+ process.env.REACT_APP_YOUTUBE_API_KEY;

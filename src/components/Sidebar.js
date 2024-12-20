@@ -10,7 +10,7 @@ const Sidebar = () => {
   const isSideNavOpen = useSelector(store => store.appConfig.isSideNavOpen);
   if(!isSideNavOpen) return null;
   return (
-    <div className='w-56 shadow-xl h-screen'>
+    <div className='w-52 border border-gray-200'>
       <div className='p-3'>
         <ul className='border-b border-b-gray-400 pb-3'>
           <li className='py-2 flex items-center'><FaHome className='w-10'/><span>Home</span></li>
