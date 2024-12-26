@@ -5,3 +5,6 @@ export const SEARCH_ICON = 'https://cdn2.iconfinder.com/data/icons/clean-simple/
 // APIs
 export const GET_MOST_POPULAR_VIDEOS = 
 'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='+ process.env.REACT_APP_YOUTUBE_API_KEY;
+
+export const getVideoByIdURL = (id) =>
+'https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id='+ id +'&key='+ process.env.REACT_APP_YOUTUBE_API_KEY;

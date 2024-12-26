@@ -8,7 +8,7 @@ const useMostPopularVideos = () => {
   const dispatch = useDispatch();
   const getMostPopularVideos = async () => {
     const data = await fetch(GET_MOST_POPULAR_VIDEOS);
-    const jsonData = data.json();
+    const jsonData = await data.json();
     dispatch(setPopularVideos(jsonData));
   }
   useEffect(() => {
