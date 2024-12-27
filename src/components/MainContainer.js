@@ -6,7 +6,9 @@ import useMostPopularVideos from '../utils/hooks/useMostPopularVideos';
 
 const MainContainer = () => {
   const isSideNavOpen = useSelector(store => store.appConfig.isSideNavOpen);
+
   useMostPopularVideos();
+
   return (
     <div className='flex flex-col flex-1'>
         <div className='flex justify-center items-center'>

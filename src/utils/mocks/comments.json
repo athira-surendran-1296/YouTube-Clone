@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "author": "user1",
+        "content": "This is the first comment.",
+        "replies": [
+            {
+                "id": 2,
+                "author": "user2",
+                "content": "This is a reply to the first comment.",
+                "replies": [
+                    {
+                        "id": 3,
+                        "author": "user3",
+                        "content": "This is a reply to the reply.",
+                        "replies": []
+                    },
+                    {
+                        "id": 31,
+                        "author": "user33",
+                        "content": "This is also a reply to the reply.",
+                        "replies": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "author": "user4",
+        "content": "This is another top-level comment.",
+        "replies": [
+            {
+                "id": 5,
+                "author": "user5",
+                "content": "This is a reply to the second top-level comment.",
+                "replies": []
+            }
+        ]
+    }
+]

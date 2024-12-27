@@ -27,6 +27,7 @@ const VideoCard = ({snippet, statistics}) => {
   const title = snippet?.title;
   const channelTitle = snippet?.channelTitle;
   const views = statistics?.viewCount;
+  
   return (
     <div className='bg-white rounded-lg p-3 flex flex-col gap-8 mb-2'>
         <div className='h-36 w-56'>

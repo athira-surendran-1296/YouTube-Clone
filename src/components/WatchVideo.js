@@ -16,6 +16,7 @@ const WatchVideo = () => {
         referrerPolicy="strict-origin-when-cross-origin" 
         allowFullScreen>
       </iframe>
+      <div className='font-bold text-xl pt-3'>{items?.[0]?.snippet?.title}</div>
     </div>
   )
 } 
