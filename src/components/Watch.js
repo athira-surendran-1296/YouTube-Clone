@@ -23,12 +23,12 @@ const Watch = () => {
   }, []);
 
   return (
-    <div className='flex p-5'>
-      <div className='flex flex-col'>
+    <div className='flex flex-col p-5 w-full'>
+      <div className='flex gap-3'>
         <WatchVideo id={videoId}/>
-        <CommentsContainer />
+        <LiveChatContainer />
       </div>
-      <LiveChatContainer />
+      <CommentsContainer />
     </div>
   )
 }
