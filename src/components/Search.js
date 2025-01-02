@@ -15,7 +15,7 @@ const Search = () => {
       setSearchSuggestions(cashedSearchSuggestions[searchText]);
       return;
     }
-    console.log('api called', searchText)
+    // console.log('api called', searchText)
     const data = await fetch(SEARCH_SUGGESTION_API+searchText);
     const jsonData = await data.json();
     setSearchSuggestions(jsonData?.[1]);
@@ -45,22 +45,23 @@ const Search = () => {
   return (
     <div className='flex flex-col flex-1'>
       <div className='flex'>
-        <input className='border flex-1 border-gray-400  rounded-l-full p-1 px-3'
+        <input className='border flex-1 border-gray-400  rounded-l-full p-1 px-2 md:px-3'
                onFocus={() => setShowSearchResults(true)} 
                onBlur={() => setShowSearchResults(false)} 
                value={searchText} 
                onChange={handleSearch}/>
-        <button className='border border-gray-400 border-l-0 px-4 rounded-r-full bg-gray-100'>
-            <img className='w-7' src={SEARCH_ICON} />
+        <button className='border border-gray-400 border-l-0 px-2 md:px-4 rounded-r-full bg-gray-100'>
+            <img className='w-4 md:w-7' src={SEARCH_ICON} />
         </button>
       </div>
-      {showSearchResults && !!searchSuggestions.length && <div className='absolute top-10 m-5 mt-0 bg-white border border-gray-400 rounded-b-lg w-[39.1rem]'>
-        <ul className='pb-2'>
-          {searchSuggestions.map((suggestion, index) => 
-            <li key={suggestion+index} className='px-2 pb-3 hover:bg-slate-100'>{suggestion}</li>)
-          }
-        </ul>
-      </div>}
+      {showSearchResults && !!searchSuggestions.length && 
+        <div className='absolute top-10 m-5 mt-0 bg-white border border-gray-400 rounded-b-lg md:w-[39rem]'>
+          <ul className='pb-2'>
+            {searchSuggestions.map((suggestion, index) => 
+              <li key={suggestion+index} className='px-2 pb-3 hover:bg-slate-100'>{suggestion}</li>)
+            }
+          </ul>
+        </div>}
     </div>
   )
 }

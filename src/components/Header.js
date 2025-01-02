@@ -13,15 +13,15 @@ const Header = () => {
   }
 
   return (
-    <div className='flex justify-between px-6 py-2 gap-40 shadow-md'>
-        <div className='flex gap-5'>
-            <FaBars className='w-8 h-8 cursor-pointer' onClick={toggleMenuHandler}/>
-            <img className='w-24' src={LOGO} alt='Logo'/>
+    <div className='flex justify-between items-center px-3 md:px-6 py-2 shadow-md gap-3 md:gap-6'>
+        <div className='flex gap-2'>
+            <FaBars className='md:w-6 md:h-6 cursor-pointer' onClick={toggleMenuHandler}/>
+            <img className='w-12 md:w-20' src={LOGO} alt='Logo'/>
         </div>
         <Search />
         <div>
             <img
-            className="w-10"
+            className="w-4 md:w-8"
             alt="user"
             src={USER_ICON}
             />
