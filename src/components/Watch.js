@@ -7,8 +7,10 @@ import { useSearchParams } from 'react-router-dom';
 import useGetVideoById from '../utils/hooks/useGetVideoById';
 import { clearWatchPage } from '../utils/store/slice/videosSlice';
 import LiveChatContainer from './LiveChatContainer';
+import useIsMobile from '../utils/hooks/useIsMobile';
 
 const Watch = () => {
+  const isMobile = useIsMobile();
 
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
@@ -26,8 +28,9 @@ const Watch = () => {
     <div className='flex flex-col p-5 w-full'>
       <div className='flex gap-3'>
         <WatchVideo id={videoId}/>
-        <LiveChatContainer />
+        {!isMobile && <LiveChatContainer />}
       </div>
+      {isMobile && <LiveChatContainer />}
       <CommentsContainer />
     </div>
   )

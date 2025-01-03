@@ -4,10 +4,10 @@ import COMMENTS from '../utils/mocks/comments';
 
 const CommentList = ({ comments }) => {
    return(comments.map(comment => 
-    <>
-        <Comment key={comment.id} {...comment} />
-            <div className='ml-6'><CommentList comments={comment.replies} /></div>
-    </>
+    <div key={comment.id}>
+        <Comment  {...comment} />
+            <div className='ml-2 md:ml-5'><CommentList comments={comment.replies} /></div>
+    </div>
    ))
 }
 
