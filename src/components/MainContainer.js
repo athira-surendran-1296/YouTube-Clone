@@ -10,12 +10,8 @@ const MainContainer = () => {
   useMostPopularVideos();
 
   return (
-    <div className='flex flex-col flex-1'>
-        <div className='flex justify-center items-center'>
-          <div className={isSideNavOpen ? 'w-[62rem]' : 'w-[78rem]'}>
-            <ButtonList />
-          </div>
-        </div>
+    <div className='flex flex-col'>
+        <ButtonList />
         <VideoContainer />
     </div>
   )

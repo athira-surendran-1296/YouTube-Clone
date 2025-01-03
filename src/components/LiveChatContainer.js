@@ -9,8 +9,8 @@ const Chat = ({username, message}) => {
         <div className='flex items-center gap-1 shadow-sm p-1 px-0'>
             <img src={USER_ICON} alt="User Icon" className="w-6 h-6" />
             <div className="flex gap-2">
-                <h4 className="font-bold text-sm">{username}</h4>
-                <p className="text-sm">{message}</p>
+                <h4 className="font-bold text-xs">{username}</h4>
+                <p className="text-xs">{message}</p>
             </div>
         </div>)
 }
@@ -50,7 +50,7 @@ const LiveChatContainer = () => {
   }, []);
 
   return (
-    <div className='flex-1 p-3 border-blue-300 bg-blue-100 rounded-lg'>
+    <div className='hidden md:block flex-1 p-3 border-blue-300 bg-blue-100 rounded-lg'>
       <div>
         <h1 className='text-lg font-bold mb-2'>Live Chat</h1>
         <div className='flex flex-col gap-2'>

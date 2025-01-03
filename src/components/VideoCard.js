@@ -1,8 +1,6 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 const VideoCard = ({snippet, statistics}) => {
-  const navigate =useNavigate();
 
   const formatTitle = (title) => {
     if(title.length > 45)
@@ -30,10 +28,10 @@ const VideoCard = ({snippet, statistics}) => {
   
   return (
     <div className='bg-white rounded-lg p-3 flex flex-col gap-8 mb-2'>
-        <div className='h-36 w-56'>
+        <div className='md:h-36 md:w-56'>
             <img className='rounded-md' src={thumbnailUrl} />
         </div>
-        <div className='flex flex-col w-56'>
+        <div className='flex flex-col md:w-56'>
             <p className='font-bold p-1 pt-3'>{formatTitle(title)}</p>
             <p className='text-sm text-gray-500 p-1 pt-3 pb-1'>
               { channelTitle + ' • ' + formatNumberToUnit(views) + ' Views'}

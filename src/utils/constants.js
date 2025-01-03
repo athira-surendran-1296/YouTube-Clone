@@ -12,3 +12,18 @@ export const SEARCH_SUGGESTION_API = "http://suggestqueries.google.com/complete/
 export const getVideoByIdURL = (id) =>
 'https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id='+ id +'&key='+ process.env.REACT_APP_YOUTUBE_API_KEY;
 
+export const BTN_NAMES_LIST = [
+    { id: 1, name: 'All' },
+    { id: 2, name: 'Live' },
+    { id: 3, name: 'Games' },
+    { id: 4, name: 'Coding' },
+    { id: 5, name: 'Marvel' },
+    { id: 6, name: 'Cooking' },
+    { id: 7, name: 'Comedy' },
+    { id: 8, name: 'Music' },
+    { id: 9, name: 'Travel' },
+    { id: 10, name: 'Chess' },
+    { id: 11, name: 'Sports' },
+    { id: 12, name: 'Movies' }
+  ];
+

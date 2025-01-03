@@ -13,7 +13,7 @@ const Header = () => {
   }
 
   return (
-    <div className='flex justify-between items-center px-3 md:px-6 py-2 shadow-md gap-3 md:gap-6'>
+    <div className='sticky top-0 flex justify-between items-center px-3 md:px-6 py-2 shadow-md gap-3 md:gap-6 bg-white'>
         <div className='flex gap-2'>
             <FaBars className='md:w-6 md:h-6 cursor-pointer' onClick={toggleMenuHandler}/>
             <img className='w-12 md:w-20' src={LOGO} alt='Logo'/>

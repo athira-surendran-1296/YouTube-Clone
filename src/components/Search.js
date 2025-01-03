@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { SEARCH_ICON, SEARCH_SUGGESTION_API } from '../utils/constants'
 import { useDispatch, useSelector } from 'react-redux';
 import { cacheSearch } from '../utils/store/slice/searchSlice';
+import { closeSideNav } from '../utils/store/slice/appConfigSlice';
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -46,8 +47,8 @@ const Search = () => {
     <div className='flex flex-col flex-1'>
       <div className='flex'>
         <input className='border flex-1 border-gray-400  rounded-l-full p-1 px-2 md:px-3'
-               onFocus={() => setShowSearchResults(true)} 
-               onBlur={() => setShowSearchResults(false)} 
+               onFocus={() => {setShowSearchResults(true); dispatch(closeSideNav())}} 
+               onBlur={() => {setShowSearchResults(false); dispatch(closeSideNav())}} 
                value={searchText} 
                onChange={handleSearch}/>
         <button className='border border-gray-400 border-l-0 px-2 md:px-4 rounded-r-full bg-gray-100'>

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const appConfigSlice = createSlice({
     name: 'appConfig',
     initialState: {
-        isSideNavOpen: true
+        isSideNavOpen: false
     },
     reducers: {
         toggleSideNav: (state, action) => {
