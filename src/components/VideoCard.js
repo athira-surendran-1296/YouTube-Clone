@@ -10,6 +10,7 @@ const VideoCard = ({snippet, statistics}) => {
   }
 
   function formatNumberToUnit(number) {
+    if(!number) return '10K';
     if (number < 1000) {
         return `${number}`;
     } else if (number >= 1000 && number < 100000) {
@@ -21,7 +22,7 @@ const VideoCard = ({snippet, statistics}) => {
     }
   }
 
-  const thumbnailUrl = snippet?.thumbnails?.standard?.url;
+  const thumbnailUrl = snippet?.thumbnails?.standard?.url || snippet?.thumbnails?.high?.url;
   const title = snippet?.title;
   const channelTitle = snippet?.channelTitle;
   const views = statistics?.viewCount;

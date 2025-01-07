@@ -7,12 +7,16 @@ import { SiYoutubeshorts } from 'react-icons/si';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { closeSideNav } from '../utils/store/slice/appConfigSlice';
+import { clearSearchText } from '../utils/store/slice/searchResultSlice';
 
 const Sidebar = () => {
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(closeSideNav());
   };
+  const prepareHomePge = () => {
+    dispatch(clearSearchText());
+  }
   const isSideNavOpen = useSelector(store => store.appConfig.isSideNavOpen);
   if (!isSideNavOpen) return null;
   return (
@@ -20,7 +24,7 @@ const Sidebar = () => {
       <div className='w-1/2 md:w-52 border border-gray-200 absolute left-0 h-screen bg-white'>
         <div className='p-3 h-full overflow-y-auto'>
           <ul className='border-b border-b-gray-400 pb-3'>
-            <Link to={'/'}><li className='py-2 flex items-center'><FaHome className='w-10' /><span>Home</span></li></Link>
+            <Link onClick={prepareHomePge} to={'/'}><li className='py-2 flex items-center'><FaHome className='w-10' /><span>Home</span></li></Link>
             <li className='py-2 flex items-center'><SiYoutubeshorts className='w-10' /><span>Shorts</span></li>
             <li className='py-2 flex items-center'><MdSubscriptions className='w-10' /><span>Subscriptions</span></li>
           </ul>

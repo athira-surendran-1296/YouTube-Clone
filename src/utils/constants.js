@@ -7,6 +7,10 @@ export const USER_ICON = "https://www.iconpacks.net/icons/2/free-user-icon-3296-
 export const GET_MOST_POPULAR_VIDEOS = 
 'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='+ process.env.REACT_APP_YOUTUBE_API_KEY;
 
+export const SEARCH_API = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&type=video&q=';
+
+export const getSearchAPI = (searchText) => SEARCH_API + searchText + '&key=' + process.env.REACT_APP_YOUTUBE_API_KEY;
+
 export const SEARCH_SUGGESTION_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
 export const getVideoByIdURL = (id) =>
